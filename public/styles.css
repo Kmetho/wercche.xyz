@@ -39,10 +39,16 @@ img {
 .name {
   font-family: "plantasia_myrtilloregular", sans-serif;
   mix-blend-mode: difference;
+  font-size: 100px;
+  width: auto;
+  height: auto;
 }
 
 .occu {
   font-family: "plantasia_myrtilloregular", sans-serif;
+  font-size: 40px;
+  width: auto;
+  height: auto;
 }
 
 .text {
@@ -57,6 +63,24 @@ img {
 footer {
   font-size: 12.5px;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 8px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .name {
+    font-size: 33px;
+  }
+  .occu {
+    font-size: 26px;
+  }
+
+  .text {
+    top: 0;
+    left: 15px;
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
