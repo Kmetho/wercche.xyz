@@ -8,17 +8,18 @@
   cursor: none;
 }
 
-body {
-  background-image: url("./assets/images/GEO3.2.png");
-  background-size: fill;
+img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .circle {
   pointer-events: none;
   fill: rgb(120, 187, 239);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -50;
+  left: -50;
   mix-blend-mode: difference;
   z-index: 150;
 }
@@ -27,6 +28,12 @@ body {
   transition-duration: 300ms;
   transition-timing-function: ease-out;
   transform: translate(-50%, -50%);
+}
+
+.headSVG {
+  width: 1000px;
+  height: 250px;
+  stroke: rgb(244, 234, 226);
 }
 
 .name {
