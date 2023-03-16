@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "authentic_sans90", sans-serif;
+  color: rgb(255, 255, 255);
+  cursor: none;
+}
+
+body {
+  background-image: url("./assets/images/GEO3.2.png");
+  background-size: fill;
+}
+
+.circle {
+  pointer-events: none;
+  fill: rgb(120, 187, 239);
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 150;
+}
+
+.big {
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+  transform: translate(-50%, -50%);
+}
+
+.name {
+  font-family: "plantasia_myrtilloregular", sans-serif;
+  mix-blend-mode: difference;
+}
+
+.occu {
+  font-family: "plantasia_myrtilloregular", sans-serif;
+}
+
+.text {
+  font-size: 35px;
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  display: grid;
+  gap: 20px;
+}
+
+footer {
+  font-size: 12.5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
