@@ -30,28 +30,32 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.headSVG {
-  width: 1000px;
-  height: 250px;
+.heading {
+  width: 100vw;
+  height: 200px;
   stroke: rgb(244, 234, 226);
 }
 
 .name {
   font-family: "plantasia_myrtilloregular", sans-serif;
   mix-blend-mode: difference;
-  font-size: 100px;
+  dominant-baseline: middle;
+  font-size: 140px;
   width: auto;
   height: auto;
 }
 
 .occu {
   font-family: "plantasia_myrtilloregular", sans-serif;
-  font-size: 40px;
+  dominant-baseline: hanging;
+  font-size: 50px;
   width: auto;
   height: auto;
 }
 
+
 .text {
+  margin-right: 50px;
   font-size: 35px;
   position: absolute;
   top: 25px;
