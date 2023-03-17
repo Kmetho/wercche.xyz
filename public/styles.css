@@ -6,6 +6,11 @@
   font-family: "authentic_sans90", sans-serif;
   color: rgb(255, 255, 255);
   cursor: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img {
@@ -28,6 +33,10 @@ img {
   transition-duration: 300ms;
   transition-timing-function: ease-out;
   transform: translate(-50%, -50%);
+}
+
+.row1 {
+  margin-bottom: 60px;
 }
 
 .heading {
@@ -53,7 +62,6 @@ img {
   height: auto;
 }
 
-
 .text {
   margin-right: 50px;
   font-size: 35px;
@@ -67,8 +75,8 @@ img {
 footer {
   font-size: 12.5px;
   position: absolute;
-  bottom: 5px;
-  right: 8px;
+  bottom: 10px;
+  right: 13px;
 }
 
 @media screen and (max-width: 1250px) {
@@ -84,6 +92,9 @@ footer {
   }
 }
 @media screen and (max-width: 820px) {
+  #mouse {
+    visibility: hidden;
+  }
   .name {
     font-size: 50px;
   }
