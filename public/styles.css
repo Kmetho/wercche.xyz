@@ -14,7 +14,7 @@
 }
 
 body {
-  animation: pop 1.25s ease-in;
+  animation: pop 2s ease-in;
 }
 
 img {
@@ -37,6 +37,14 @@ img {
   transition-duration: 300ms;
   transition-timing-function: ease-out;
   transform: translate(-50%, -50%);
+}
+.appear {
+  animation: pop 0.5s cubic-bezier(0.27, 1.25, 0.76, 0.36);
+}
+.inner-txt {
+  fill: #fff;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 .row1 {
@@ -179,7 +187,7 @@ footer {
 }
 @keyframes pop {
   from {
-    opacity: 0%;
+    opacity: 0;
   }
   to {
     opacity: 100%;

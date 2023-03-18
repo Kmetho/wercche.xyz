@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/smile.png">
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
     <title>wwwerche</title>
@@ -15,13 +16,21 @@
 
     <div id="mouse">
         <div class="circle big">
-            <svg height="50" width="50">
-                <circle cx="25" cy="25" r="25" stroke-width="0"></circle>
+            <svg height="70" width="70">
+                <circle class="inner-big" cx="25" cy="25" r="25" stroke-width="0"></circle>
+                <circle class="inner-bigger" cx="35" cy="35" r="35" stroke-width="0" style="visibility: hidden;">
+                </circle>
+                <defs>
+                    <path id="txt-path" d="M 15 40 C 15 12 63 12 63 40"></path>
+                </defs>
+                <text class="inner-txt" style="visibility: hidden;">
+                    <textPath startOffset="0" xlink:href="#txt-path">click</textPath>
+                </text>
             </svg>
         </div>
         <div class="circle small">
             <svg height="10" width="10">
-                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+                <circle cx="5" cy="5" r="5" stroke-width="0"></circle>
             </svg>
         </div>
     </div>
