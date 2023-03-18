@@ -45,7 +45,7 @@ img {
 
 .heading {
   width: 100vw;
-  height: 200px;
+  height: 230px;
   stroke: rgb(244, 234, 226);
 }
 
@@ -69,7 +69,7 @@ img {
 .occu {
   font-family: "plantasia_myrtilloregular", sans-serif;
   dominant-baseline: hanging;
-  font-size: 50px;
+  font-size: 70px;
   width: auto;
   height: auto;
 }
@@ -91,9 +91,43 @@ footer {
   right: 13px;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
+  .name {
+    font-size: 75px;
+  }
+  .occu {
+    font-size: 40px;
+    dominant-baseline: middle;
+  }
+  .row {
+    font-size: 31px;
+  }
+  .text {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 820px) {
+  #mouse {
+    visibility: hidden;
+  }
+  .name {
+    font-size: 56px;
+  }
+  .occu {
+    font-size: 44px;
+  }
+  .row {
+    font-size: 28px;
+  }
+  .text {
+    top: 0;
+    left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 580px) {
   .row1 {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
   .heading {
     position: absolute;
@@ -104,38 +138,13 @@ footer {
     visibility: visible;
   }
   .name {
-    font-size: 75px;
-  }
-  .occu {
-    font-size: 40px;
-  }
-  .text {
-    font-size: 30px;
-    margin-right: 50px;
-  }
-}
-@media screen and (max-width: 820px) {
-  #mouse {
-    visibility: hidden;
-  }
-  .name {
     font-size: 50px;
   }
   .occu {
-    font-size: 30px;
+    font-size: 50px;
+    dominant-baseline: hanging;
   }
-}
-@media screen and (max-width: 580px) {
-  .name {
-    font-size: 35px;
-  }
-  .occu {
-    font-size: 28px;
-  }
-  .text {
-    top: 0;
-    left: 20px;
-    margin-right: 20px;
+  .row {
     font-size: 25px;
   }
 }
@@ -146,9 +155,26 @@ footer {
   .occu {
     font-size: 50px;
   }
+  .row {
+    font-size: 22px;
+  }
   .text {
     gap: 10px;
-    font-size: 22px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .name {
+    font-size: 40px;
+    dominant-baseline: hanging;
+  }
+  .occu {
+    font-size: 40px;
+  }
+  .row {
+    font-size: 18px;
+  }
+  .text {
+    gap: 10px;
   }
 }
 @keyframes pop {
