@@ -8,6 +8,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
     <meta name="description" content="An autodidact developer unearthing the in-between of virtual and real.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="icon" href="./assets/images/smile.png">
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
@@ -18,15 +19,24 @@
     <img src="./assets/images/GEO3.2.png" alt="bg img">
 
     <div id="mouse">
+        <script>
+            $(document).ready(function () {
+                $(".link").hover(function () {
+                    $(".inner-big").toggleClass("hidden");
+                    $(".inner-bigger").toggleClass("hidden");
+                    $(".inner-txt").toggleClass("hidden");
+                })
+            })
+        </script>
         <div class="circle big">
             <svg height="70" width="70">
                 <circle class="inner-big" cx="25" cy="25" r="25" stroke-width="0"></circle>
-                <circle class="inner-bigger" cx="35" cy="35" r="35" stroke-width="0" style="visibility: hidden;">
+                <circle class="inner-bigger hidden" cx="35" cy="35" r="35" stroke-width="0">
                 </circle>
                 <defs>
                     <path id="txt-path" d="M 15 40 C 15 12 63 12 63 40"></path>
                 </defs>
-                <text class="inner-txt" style="visibility: hidden;">
+                <text class="inner-txt hidden">
                     <textPath startOffset="0" xlink:href="#txt-path">click</textPath>
                 </text>
             </svg>
@@ -69,21 +79,15 @@
 
         <p class="row row3">JavaScript, React.js, Next.js, Node.js, HTML, CSS, Blender</p>
 
-        <p class="row row4">Check out my <a target="_blank" href="https://github.com/Kmetho">code</a>
-            <!-- <a target="_blank" href="https://codesandbox.io/u/kmetho">CodeSandbox</a>
-            <a target="_blank" href="https://codepen.io/yghern">CodePen</a> -->
+        <p class="row row4">Check out my <a class="link" target="_blank" href="https://github.com/Kmetho">code</a>
         </p>
 
-        <!-- <a target="_blank" href="https://github.com/Kmetho">GitHub</a>
-                or my <a target="_blank" href="https://dribbble.com/Wercche">design</a>.</p> -->
-
         <p class="row row5">contact:
-            <a href="mailto:wercche@gmail.com">wercche@gmail.com</a> or DM me on
-            <a target="_blank" href="https://www.instagram.com/wercche/">instagram</a>
+            <a class="link" href="mailto:wercche@gmail.com">wercche@gmail.com</a> or DM me on
+            <a class="link" target="_blank" href="https://www.instagram.com/wercche/">instagram</a>
         </p>
 
     </div>
-
 
     <script type="text/javascript" src="./script.js"></script>
 </body>
