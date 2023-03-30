@@ -97,7 +97,8 @@ img {
   gap: 20px;
 }
 .text-bg {
-  background-color: rgb(138, 137, 90);
+  border-radius: 10%;
+  background-color: rgba(138, 137, 90, .7);
   max-width: max-content;
   padding: 5px;
 }
