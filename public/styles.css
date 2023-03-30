@@ -99,6 +99,7 @@ img {
 .text-bg {
   background-color: rgb(43, 34, 48);
   max-width: max-content;
+  padding: 5px;
 }
 
 footer {
