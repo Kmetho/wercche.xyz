@@ -98,11 +98,6 @@ img {
   display: grid;
   gap: 20px;
 }
-/* .text-bg {
-  background-color: rgba(138, 137, 90, .7);
-  max-width: max-content;
-  padding: 5px;
-} */
 
 footer {
   mix-blend-mode: difference;
