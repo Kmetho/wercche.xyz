@@ -15,12 +15,14 @@
 
 body {
   animation: pop 2s ease-in;
+  background-color: rgb(43, 34, 48);
 }
 
 img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  opacity: 0.4;
 }
 
 .circle {
@@ -96,11 +98,11 @@ img {
   display: grid;
   gap: 20px;
 }
-.text-bg {
+/* .text-bg {
   background-color: rgba(138, 137, 90, .7);
   max-width: max-content;
   padding: 5px;
-}
+} */
 
 footer {
   mix-blend-mode: difference;
