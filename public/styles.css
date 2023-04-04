@@ -15,14 +15,14 @@
 
 body {
   animation: pop 2s ease-in;
-  background-color: rgb(43, 34, 48);
+  background-color: rgb(44, 33, 35);
 }
 
 img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .circle {
