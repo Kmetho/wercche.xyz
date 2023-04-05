@@ -4,7 +4,7 @@
   padding: 0;
   overflow: hidden;
   font-family: "authentic_sans90", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(184, 184, 255);
   cursor: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -15,19 +15,19 @@
 
 body {
   animation: pop 2s ease-in;
-  background-color: rgb(44, 33, 35);
+  background-color: rgb(32, 33, 33);
 }
 
 img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .circle {
   pointer-events: none;
-  fill: rgb(120, 187, 239);
+  fill: rgb(238, 96, 85);
   position: fixed;
   top: -50;
   left: -50;
@@ -61,7 +61,6 @@ img {
 .heading {
   width: 100vw;
   height: 230px;
-  stroke: rgb(244, 234, 226);
 }
 
 .headingSmall {
@@ -69,7 +68,6 @@ img {
   visibility: hidden;
   width: 100vw;
   height: 270px;
-  stroke: rgb(244, 234, 226);
 }
 
 .name {
@@ -78,7 +76,8 @@ img {
   dominant-baseline: middle;
   font-size: 140px;
   width: auto;
-  height: auto;
+  height: auto;  
+  stroke: rgb(238, 96, 85);
 }
 
 .occu {
@@ -86,7 +85,8 @@ img {
   dominant-baseline: hanging;
   font-size: 70px;
   width: auto;
-  height: auto;
+  height: auto;  
+  stroke: rgb(147, 129, 255);
 }
 
 .text {
