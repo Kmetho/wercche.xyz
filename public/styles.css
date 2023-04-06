@@ -82,9 +82,12 @@ img {
   font-style: italic;
 }
 
+.row {
+  font-size: 35px;
+}
+
 .text {
   margin-right: 50px;
-  font-size: 35px;
   position: fixed;
   top: 25px;
   left: 50px;
@@ -108,14 +111,14 @@ canvas {
 
 @media screen and (max-width: 1300px) {
   .name {
-    font-size: 75px;
+    font-size: 100px;
     stroke-width: 3px;
   }
   .occu {
     font-size: 50px;
   }
   .row {
-    font-size: 31px;
+    font-size: 25px;
   }
   .text {
     margin-right: 50px;
@@ -127,10 +130,13 @@ canvas {
     visibility: hidden;
   }
   .name {
-    font-size: 64px;
+    font-size: 80px;
+  }
+  .occu {
+    font-size: 40px;
   }
   .row {
-    font-size: 32px;
+    font-size: 20px;
   }
   .text,
   footer {
@@ -143,33 +149,39 @@ canvas {
 }
 @media screen and (max-width: 580px) {
   .row1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .name {
-    font-size: 60px;
-    stroke-width: 1.5px;
+    margin-top: 20px;
+    line-height: 80px;
   }
-  .row {
-    font-size: 25px;
+  .occu {
+    margin-top: 10px;
+  }
+  .text {
+  gap: 30px
   }
 }
 @media screen and (max-width: 400px) {
-  .row {
-    font-size: 22px;
+  .name {
+    font-size: 70px;
   }
-  .text {
-    gap: 10px;
+  .occu {
+    font-size: 35px;
+  }
+  .row {
+    font-size: 17.5px;
   }
 }
 @media screen and (max-width: 300px) {
   .name {
-    font-size: 40px;
+    font-size: 64px;
   }
   .occu {
-    font-size: 30px;
+    font-size: 32px;
   }
   .row {
-    font-size: 18px;
+    font-size: 16px;
   }
   .text {
     gap: 10px;
