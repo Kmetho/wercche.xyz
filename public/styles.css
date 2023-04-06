@@ -4,7 +4,6 @@
   padding: 0;
   overflow: hidden;
   font-family: "authentic_sans90", sans-serif;
-  color: rgb(184, 184, 255);
   cursor: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -14,9 +13,20 @@
 }
 
 body {
+  color: rgb(246, 239, 238);
   animation: pop 2s ease-in;
   background-color: rgb(32, 33, 33);
 }
+a {
+  font-style: normal;
+  text-decoration: none;
+  color: rgb(238, 96, 85);
+}
+
+a:hover {
+  font-style: italic;
+}
+
 .isobare {
   font-family: "isobareregular", Arial, Helvetica, sans-serif;
 }
@@ -61,9 +71,14 @@ img {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(233, 79, 55);
 }
+
 .occu {
   font-size: 70px;
-  color: rgb(147, 129, 255);
+}
+
+.row,
+.occu {
+  font-style: italic;
 }
 
 .text {
@@ -87,12 +102,6 @@ canvas {
   bottom: 0;
   right: 0;
   z-index: 100;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  span {
-      color: rgb(233, 79, 55);
-  }
 }
 
 @media screen and (max-width: 1300px) {
