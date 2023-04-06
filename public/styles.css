@@ -15,7 +15,7 @@
 body {
   color: rgb(246, 239, 238);
   animation: pop 2s ease-in;
-  background-color: rgb(32, 33, 33);
+  background-color: rgb(9, 7, 11);
 }
 a {
   font-style: normal;
@@ -30,6 +30,7 @@ a:hover {
 .isobare {
   font-family: "isobareregular", Arial, Helvetica, sans-serif;
 }
+
 img {
   width: 100vw;
   height: 100vh;
@@ -92,6 +93,7 @@ img {
 }
 
 footer {
+  opacity: 0.5;
   font-size: 12.5px;
   position: fixed;
   bottom: 10px;
