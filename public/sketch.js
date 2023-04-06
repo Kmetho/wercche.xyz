@@ -1,56 +1,94 @@
-PFont font;
-PGraphics pg;
+let font;
+let pg;
 
-void setup() {
-  font = createFont("RobotoMono-Regular.ttf", 600);
-  size(800, 800, P2D);
-  pg = createGraphics(800, 800, P2D);
+let tX, tY, sp, dspx, dspy, fct;
+
+const words = "kachow";
+
+function preload() {
+  font = loadFont("./assets/fonts/Isobare-Regular.otf");
 }
 
-void draw() {
+function setup() {
+  createCanvas(400, 400);
+  createSliders();
+  pg = createGraphics(400, 400);
+}
+
+function draw() {
   background(0);
 
-  // PGraphics 
+  // PGraphics
 
-  pg.beginDraw();
   pg.background(0);
   pg.fill(255);
   pg.textFont(font);
-  pg.textSize(800);
-  pg.pushMatrix();
-  pg.translate(width/2, height/2-215);
+  pg.textSize(50);
+  pg.push();
+  pg.translate(width / 2, height / 2);
   pg.textAlign(CENTER, CENTER);
-  pg.text("a", 0, 0);
-  pg.popMatrix();
-  pg.endDraw();
+  pg.text(words, 0, 0);
+  pg.pop();
 
-  int tilesX = 16;
-  int tilesY = 16;
+  let tilesX = tX.value();
+  let tilesY = tY.value();
 
-  int tileW = int(width/tilesX);
-  int tileH = int(height/tilesY);
+  let tileW = int(width / tilesX);
+  let tileH = int(height / tilesY);
 
-  for (int y = 0; y < tilesY; y++) {
-    for (int x = 0; x < tilesX; x++) {
-
+  for (let y = 0; y < tilesY; y++) {
+    for (let x = 0; x < tilesX; x++) {
       // WARP
-      int wave = int(sin(frameCount * 0.05 + ( x * y ) * 0.07) * 100);
+      let waveX = int(
+        sin(frameCount * sp.value() + x * y * dspx.value()) * fct.value()
+      );
+      let waveY = int(
+        sin(frameCount * sp.value() + x * y * dspy.value()) * fct.value()
+      );
+
+      if (dspx.value() === 0) {
+        waveX = 0;
+      }
+
+      if (dspy.value() === 0) {
+        waveY = 0;
+      }
+
+      // image(pg,0,0)
 
       // SOURCE
-      int sx = x*tileW + wave;
-      int sy = y*tileH;
-      int sw = tileW;
-      int sh = tileH;
-
+      let sx = x * tileW + waveX;
+      let sy = y * tileH + waveY;
+      let sw = tileW;
+      let sh = tileH;
 
       // DESTINATION
-      int dx = x*tileW;
-      int dy = y*tileH;
-      int dw = tileW;
-      int dh = tileH;
-      
-      copy(pg, sx, sy, sw, sh, dx, dy, dw, dh);
+      let dx = x * tileW;
+      let dy = y * tileH;
+      let dw = tileW;
+      let dh = tileH;
 
+      copy(pg, sx, sy, sw, sh, dx, dy, dw, dh);
     }
   }
+}
+
+function createSliders() {
+  tX = createSlider(1, 80, 16, 1);
+  tX.position(20, height + 40);
+
+  tY = createSlider(1, 80, 16, 1);
+  tY.position(20, height + 100);
+
+  sp = createSlider(0, 1, 0.005, 0.01);
+  sp.position(20, height + 160);
+
+  dspx = createSlider(0, 0.1, 0.05, 0.001);
+  dspx.position(180, height + 40);
+
+  dspy = createSlider(0, 0.2, 0, 0.01);
+  dspy.position(180, height + 100);
+
+  fct = createSlider(0, 300, 100, 1);
+  fct.position(180, height + 160);
 }

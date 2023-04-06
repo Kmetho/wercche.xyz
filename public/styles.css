@@ -5,19 +5,29 @@
   overflow: hidden;
   font-family: "authentic_sans90", sans-serif;
   color: rgb(184, 184, 255);
-  cursor: none;
+  /* cursor: none; */
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-
+canvas {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+input {
+  display: none;
+}
 body {
   animation: pop 2s ease-in;
   background-color: rgb(32, 33, 33);
 }
-
+.isobar {
+  font-family: "isobareregular", Arial, Helvetica, sans-serif;
+}
 img {
   width: 100vw;
   height: 100vh;
@@ -45,9 +55,6 @@ img {
   visibility: hidden;
 }
 
-.appear {
-  animation: pop 0.5s cubic-bezier(0.27, 1.25, 0.76, 0.36);
-}
 .inner-txt {
   fill: #fff;
   font-size: 22px;
@@ -55,54 +62,36 @@ img {
 }
 
 .row1 {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .heading {
   width: 100vw;
-  height: 230px;
-}
-
-.headingSmall {
-  position: absolute;
-  visibility: hidden;
-  width: 100vw;
-  height: 270px;
 }
 
 .name {
-  font-family: "plantasia_myrtilloregular", sans-serif;
-  mix-blend-mode: difference;
-  dominant-baseline: middle;
   font-size: 140px;
-  width: auto;
-  height: auto;
-  stroke: rgb(238, 96, 85);
+  color: rgb(233, 79, 55);
 }
 
 .occu {
-  font-family: "plantasia_myrtilloregular", sans-serif;
-  dominant-baseline: hanging;
   font-size: 70px;
-  width: auto;
-  height: auto;
-  stroke: rgb(147, 129, 255);
+  color: rgb(147, 129, 255);
 }
 
 .text {
   margin-right: 50px;
   font-size: 35px;
-  position: absolute;
+  position: fixed;
   top: 25px;
   left: 50px;
   display: grid;
-  gap: 20px;
+  gap: 30px;
 }
 
 footer {
-  mix-blend-mode: difference;
   font-size: 12.5px;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 50px;
 }
@@ -112,8 +101,7 @@ footer {
     font-size: 75px;
   }
   .occu {
-    font-size: 40px;
-    dominant-baseline: middle;
+    font-size: 50px;
   }
   .row {
     font-size: 31px;
@@ -121,24 +109,20 @@ footer {
   .text {
     margin-right: 50px;
   }
-}
-@media screen and (max-width: 920px) {
-  .text-bg {
-    max-width: 100%;
+  canvas {
+    display: none;
   }
 }
+
 @media screen and (max-width: 820px) {
   #mouse {
     visibility: hidden;
   }
   .name {
-    font-size: 56px;
-  }
-  .occu {
-    font-size: 44px;
+    font-size: 64px;
   }
   .row {
-    font-size: 28px;
+    font-size: 32px;
   }
   .text,
   footer {
@@ -153,32 +137,20 @@ footer {
   .row1 {
     margin-bottom: 20px;
   }
-  .heading {
-    position: absolute;
-    visibility: hidden;
-  }
-  .headingSmall {
-    position: static;
-    visibility: visible;
-  }
   .name {
-    font-size: 50px;
-  }
-  .occu {
-    font-size: 50px;
-    dominant-baseline: hanging;
+    font-size: 60px;
   }
   .row {
     font-size: 25px;
   }
 }
 @media screen and (max-width: 400px) {
-  .name {
+  /* .name {
     font-size: 50px;
   }
   .occu {
-    font-size: 50px;
-  }
+    font-size: 50px; */
+  /* } */
   .row {
     font-size: 22px;
   }
@@ -189,7 +161,6 @@ footer {
 @media screen and (max-width: 300px) {
   .name {
     font-size: 40px;
-    dominant-baseline: hanging;
   }
   .occu {
     font-size: 40px;

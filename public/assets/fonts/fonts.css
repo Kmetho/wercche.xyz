@@ -7,15 +7,11 @@
   font-style: normal;
 }
 
-
-
-
 @font-face {
-  font-family: "plantasia_myrtilloregular";
-  src: url("plantasiamyrtillo-regular-webfont.woff2") format("woff2"),
-    url("plantasiamyrtillo-regular-webfont.woff") format("woff"),
-    url("plantasiamyrtillo-regular-webfont.svg#plantasia_myrtilloregular")
-      format("svg");
+  font-family: "isobareregular";
+  src: url("isobare-regular-webfont.woff2") format("woff2"),
+    url("isobare-regular-webfont.woff") format("woff"),
+    url("isobare-regular-webfont.svg#isobareregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
