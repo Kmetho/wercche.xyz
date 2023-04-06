@@ -3,7 +3,7 @@ Design and build: Weronika Kmieć (that's me)
 
 Thank you for the typefaces ✿
 
-Amira Karam, Plantasia Myrtillo Regular → http://lucasdescroix.fr/teaching/plantasia/
+Clémence Fontaine, Isobare → https://www.clemencefontaine.fr/page/isobar.html 
 
 Christina Janus and Desmond Wong, AUTHENTIC Sans → https://authentic.website/sans.html
 

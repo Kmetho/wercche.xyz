@@ -5,27 +5,19 @@
   overflow: hidden;
   font-family: "authentic_sans90", sans-serif;
   color: rgb(184, 184, 255);
-  /* cursor: none; */
+  cursor: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-canvas {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1000;
-}
-input {
-  display: none;
-}
+
 body {
   animation: pop 2s ease-in;
   background-color: rgb(32, 33, 33);
 }
-.isobar {
+.isobare {
   font-family: "isobareregular", Arial, Helvetica, sans-serif;
 }
 img {
@@ -55,12 +47,6 @@ img {
   visibility: hidden;
 }
 
-.inner-txt {
-  fill: #fff;
-  font-size: 22px;
-  letter-spacing: 1px;
-}
-
 .row1 {
   margin-bottom: 50px;
 }
@@ -71,9 +57,10 @@ img {
 
 .name {
   font-size: 140px;
-  color: rgb(233, 79, 55);
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(233, 79, 55);
 }
-
 .occu {
   font-size: 70px;
   color: rgb(147, 129, 255);
@@ -95,10 +82,23 @@ footer {
   bottom: 10px;
   left: 50px;
 }
+canvas {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  span {
+      color: rgb(233, 79, 55);
+  }
+}
 
 @media screen and (max-width: 1300px) {
   .name {
     font-size: 75px;
+    stroke-width: 3px;
   }
   .occu {
     font-size: 50px;
@@ -108,9 +108,6 @@ footer {
   }
   .text {
     margin-right: 50px;
-  }
-  canvas {
-    display: none;
   }
 }
 
@@ -139,18 +136,13 @@ footer {
   }
   .name {
     font-size: 60px;
+    stroke-width: 1.5px;
   }
   .row {
     font-size: 25px;
   }
 }
 @media screen and (max-width: 400px) {
-  /* .name {
-    font-size: 50px;
-  }
-  .occu {
-    font-size: 50px; */
-  /* } */
   .row {
     font-size: 22px;
   }
@@ -163,7 +155,7 @@ footer {
     font-size: 40px;
   }
   .occu {
-    font-size: 40px;
+    font-size: 30px;
   }
   .row {
     font-size: 18px;
