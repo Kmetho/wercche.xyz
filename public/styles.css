@@ -66,10 +66,8 @@ a:hover {
 
 .name {
   font-size: 140px;
-  color: transparent;
-  letter-spacing: 1px;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: rgb(233, 79, 55);
+  color: rgb(233, 79, 55);
+  letter-spacing: 2px;
 }
 
 .occu {
@@ -115,7 +113,6 @@ canvas {
 @media screen and (max-width: 1300px) {
   .name {
     font-size: 100px;
-    stroke-width: 3px;
   }
   .occu {
     font-size: 50px;
@@ -134,8 +131,6 @@ canvas {
   }
   .name {
     font-size: 80px;
-    stroke-width: 2px;
-    letter-spacing: 4px;
   }
   .occu {
     font-size: 40px;
@@ -181,7 +176,6 @@ canvas {
 @media screen and (max-width: 300px) {
   .name {
     font-size: 64px;
-    stroke-width: 1.25px;
   }
   .occu {
     font-size: 32px;
