@@ -135,6 +135,7 @@ canvas {
   .name {
     font-size: 80px;
     stroke-width: 2px;
+    letter-spacing: 4px;
   }
   .occu {
     font-size: 40px;
@@ -180,6 +181,7 @@ canvas {
 @media screen and (max-width: 300px) {
   .name {
     font-size: 64px;
+    stroke-width: 1.25px;
   }
   .occu {
     font-size: 32px;
