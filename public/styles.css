@@ -51,8 +51,12 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
+.inner-big {
+}
+
 .hidden {
-  visibility: hidden;
+  animation: plop 300ms ease-out;
+  animation-fill-mode: forwards;
 }
 
 .row1 {
@@ -161,7 +165,7 @@ canvas {
     margin-top: 10px;
   }
   .text {
-  gap: 30px
+    gap: 30px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -195,5 +199,15 @@ canvas {
   }
   to {
     opacity: 100%;
+  }
+}
+@keyframes plop {
+  from {
+    transform: scale(1);
+    visibility: visible;
+  }
+  to {
+    transform: scale(0);
+    visibility: hidden;
   }
 }
