@@ -51,9 +51,6 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
-.inner-big {
-}
-
 .hidden {
   animation: plop 300ms ease-out;
   animation-fill-mode: forwards;
@@ -137,6 +134,7 @@ canvas {
   }
   .name {
     font-size: 80px;
+    stroke-width: 2px;
   }
   .occu {
     font-size: 40px;
