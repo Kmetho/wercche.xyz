@@ -83,7 +83,7 @@ a:hover {
   font-size: 2rem;
 }
 
-.line{
+.line {
   border-bottom: 1px solid black;
 }
 
@@ -91,12 +91,25 @@ a:hover {
   font-size: 1.75rem;
 }
 
-.footer {
-  opacity: 0.5;
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 0.75rem;
   position: fixed;
+  width: 100%;
   bottom: 3%;
-  left: 7%;
+}
+.icon {
+  padding: 0 10px;
+}
+.add-fill-here {
+  fill: var(--accent-color);
+}
+
+.footer {
+  margin-top: 2rem;
+  opacity: 0.5;
 }
 
 canvas {
