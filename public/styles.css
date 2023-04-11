@@ -1,3 +1,9 @@
+:root {
+  --accent-color: rgb(0, 0, 255);
+  --text-color: rgb(29, 32, 31);
+  --cursor-color: rgb(244, 159, 10);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,39 +11,36 @@
   overflow: hidden;
   font-family: "authentic_sans90", sans-serif;
   cursor: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 body {
-  color: rgb(246, 239, 238);
+  color: var(--text-color);
   animation: pop 2s ease-in;
-  background-color: rgb(9, 7, 11);
   background-image: url(./assets/images/grad2.png);
   background-position: 50%;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
+
+p {
+  font-size: 16px;
+}
+
 a {
   font-style: normal;
   text-decoration: none;
-  color: rgb(238, 96, 85);
+  color: var(--accent-color);
 }
 
 a:hover {
   font-style: italic;
 }
 
-.isobare {
-  font-family: "isobareregular", Arial, Helvetica, sans-serif;
-}
-
 .circle {
   pointer-events: none;
-  fill: rgb(238, 96, 85);
+  fill: var(--cursor-color);
   position: fixed;
   top: -50;
   left: -50;
@@ -52,57 +55,50 @@ a:hover {
 }
 
 .hidden {
-  animation: plop 300ms ease-out;
+  animation: hide 300ms ease-out;
   animation-fill-mode: forwards;
 }
 
-.row1 {
-  margin-bottom: 50px;
-}
-
-.heading {
-  width: 100vw;
-}
-
-.name {
-  font-size: 140px;
-  color: rgb(233, 79, 55);
-  letter-spacing: 2px;
-}
-
-.occu {
-  font-size: 70px;
+.text {
+  width: fit-content;
+  margin: 5% 7%;
+  position: fixed;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .row,
+.name,
 .occu {
   font-style: italic;
+  font-weight: lighter;
+}
+
+.name {
+  font-size: 4rem;
+  color: var(--accent-color);
+}
+
+.occu {
+  font-size: 2rem;
+}
+
+.line{
+  border-bottom: 1px solid black;
 }
 
 .row {
-  background-color: rgba(10, 15, 87, 0.8);
-  border-radius: 50px;
-  font-size: 35px;
-  max-width: fit-content;
-  padding: 10px 20px;
+  font-size: 1.75rem;
 }
 
-.text {
-  margin-right: 50px;
-  position: fixed;
-  top: 25px;
-  left: 50px;
-  display: grid;
-  gap: 30px;
-}
-
-footer {
+.footer {
   opacity: 0.5;
-  font-size: 12.5px;
+  font-size: 0.75rem;
   position: fixed;
-  bottom: 10px;
-  left: 50px;
+  bottom: 3%;
+  left: 7%;
 }
+
 canvas {
   position: fixed;
   bottom: 0;
@@ -110,81 +106,32 @@ canvas {
   z-index: 100;
 }
 
-@media screen and (max-width: 1300px) {
-  .name {
-    font-size: 100px;
-  }
-  .occu {
-    font-size: 50px;
-  }
-  .row {
-    font-size: 25px;
-  }
-  .text {
-    margin-right: 50px;
-  }
-}
-
 @media screen and (max-width: 820px) {
   #mouse {
     visibility: hidden;
   }
+  .text {
+    margin-top: 10%;
+  }
   .name {
-    font-size: 80px;
+    font-size: 3rem;
   }
   .occu {
-    font-size: 40px;
+    font-size: 1.75rem;
   }
   .row {
-    font-size: 20px;
-  }
-  .text,
-  footer {
-    left: 20px;
-  }
-  .text {
-    top: 0;
-    margin-right: 20px;
+    font-size: 1.25rem;
   }
 }
-@media screen and (max-width: 580px) {
-  .row1 {
-    margin-bottom: 30px;
-  }
+@media screen and (max-width: 430px) {
   .name {
-    margin-top: 20px;
-    line-height: 80px;
+    font-size: 2.5rem;
   }
   .occu {
-    margin-top: 10px;
-  }
-  .text {
-    gap: 30px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .name {
-    font-size: 70px;
-  }
-  .occu {
-    font-size: 35px;
+    font-size: 1.5rem;
   }
   .row {
-    font-size: 17.5px;
-  }
-}
-@media screen and (max-width: 300px) {
-  .name {
-    font-size: 64px;
-  }
-  .occu {
-    font-size: 32px;
-  }
-  .row {
-    font-size: 16px;
-  }
-  .text {
-    gap: 10px;
+    font-size: 1rem;
   }
 }
 @keyframes pop {
@@ -195,7 +142,7 @@ canvas {
     opacity: 100%;
   }
 }
-@keyframes plop {
+@keyframes hide {
   from {
     transform: scale(1);
     visibility: visible;
