@@ -34,7 +34,7 @@ a {
   color: var(--accent-color);
 }
 
-a:hover {
+p > a:hover {
   font-style: italic;
 }
 
