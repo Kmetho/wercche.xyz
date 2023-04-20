@@ -29,18 +29,13 @@
         <script>
             $(document).ready(function () {
                 $(".link").hover(function () {
-                    $(".inner-big").toggleClass("hidden");
+                    $(".inner").toggleClass("hidden");
                 });
             })
         </script>
-        <div class="circle big">
+        <div class="circle">
             <svg height="50" width="50">
-                <circle class="inner-big" cx="25" cy="25" r="25"></circle>
-            </svg>
-        </div>
-        <div class="circle small">
-            <svg height="30" width="30">
-                <circle class="inner-small" cx="5" cy="5" r="5"></circle>
+                <circle class="inner" cx="10" cy="10" r="10"></circle>
             </svg>
         </div>
     </div>

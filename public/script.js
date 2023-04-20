@@ -1,13 +1,8 @@
-const cursorB = document.querySelector(".big");
-const cursorS = document.querySelector(".small");
+const cursor = document.querySelector(".circle");
 
 document.addEventListener("mousemove", (e) => {
-  cursorB.setAttribute(
+  cursor.setAttribute(
     "style",
-    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-  );
-  cursorS.setAttribute(
-    "style",
-    "top: " + e.pageY + "px; left: " + e.pageX + "px;"
+    "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;"
   );
 });

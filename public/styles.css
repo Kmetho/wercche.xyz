@@ -10,7 +10,6 @@
   padding: 0;
   overflow: hidden;
   font-family: "authentic_sans90", sans-serif;
-  cursor: none;
   user-select: none;
 }
 
@@ -46,13 +45,11 @@ p > a:hover {
   left: -50;
   mix-blend-mode: difference;
   z-index: 150;
-}
-
-.big {
   transition-duration: 300ms;
   transition-timing-function: ease-out;
-  transform: translate(-50%, -50%);
+  transform: translate(-20%, -20%);
 }
+
 
 .hidden {
   animation: hide 300ms ease-out;
