@@ -30,7 +30,8 @@ a {
   color: var(--accent-color);
 }
 
-p > a:hover {
+p > a:hover,
+.name:hover {
   font-style: italic;
 }
 
@@ -74,6 +75,7 @@ p > a:hover {
 }
 
 .name {
+  max-width: calc(fit-content + 10);
   font-size: 4rem;
   color: var(--accent-color);
 }
