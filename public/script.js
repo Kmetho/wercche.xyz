@@ -1,8 +1,7 @@
-const cursor = document.querySelector(".circle");
+const refreshButton = document.querySelector(".name");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.setAttribute(
-    "style",
-    "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;"
-  );
-});
+const refreshPage = () => {
+  location.reload();
+};
+
+refreshButton.addEventListener("click", refreshPage);
