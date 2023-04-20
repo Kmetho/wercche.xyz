@@ -33,6 +33,7 @@ a {
 p > a:hover,
 .name:hover {
   font-style: italic;
+  cursor: pointer;
 }
 
 .isobare {
